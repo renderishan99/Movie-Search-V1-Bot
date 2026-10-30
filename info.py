@@ -112,8 +112,8 @@ TUTORIAL_3 = environ.get("TUTORIAL_3", "https://t.me/+DQg8ISdFoVgzYTY9")   # Thi
 SHORTENER_API = environ.get("SHORTENER_API", "af2492502a6364145ea8c019324d4c14ff5d9c52") # Shortener API key
 SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", "shortxlinks.com") # Shortener website
 
-SHORTENER_API2 = environ.get("SHORTENER_API2", "3a87f3223e9cdf259128873c651860aa92d1e9cb")  # Shortener API key for second website
-SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", "vipshort.in") # Shortener website for second website
+SHORTENER_API2 = environ.get("SHORTENER_API2", "cf9c1c6ea3d2efd384d4d4bbfebad80f3dc9ef39")  # Shortener API key for second website
+SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", "shortwala.com") # Shortener website for second website
 
 SHORTENER_API3 = environ.get("SHORTENER_API3", "e915e6a2bba1ba146f667539aec1074ee0760c14")
 SHORTENER_WEBSITE3 = environ.get("SHORTENER_WEBSITE3", "softurl.in") # Shortener website for third website
