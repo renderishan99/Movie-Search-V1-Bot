@@ -44,16 +44,16 @@ name = str(environ.get('name', 'DREAMXBOTZ'))
 # 2. ADMINS, CHANNELS & PERMISSIONS
 # ==============================================================================
 # Telegram user IDs of bot administrators (space-separated in .env)
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '634637418').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5252260061').split()]
 
 # Channels to auto-index files from (Bot must be an admin in these channels)
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-100').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1003847426992').split()]
 
 # Logging & Storage Channels
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-100'))            # General activity & error logs
-BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '-100'))            # File storage / binary cache channel
-PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-100'))          # Premium subscription logs
-DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-100').split()]
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002647690158'))            # General activity & error logs
+BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '-1003767308484'))            # File storage / binary cache channel
+PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1002647690158'))          # Premium subscription logs
+DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-1003767308484').split()]
 
 # Support Group & Request Channel
 support_chat_id = environ.get('SUPPORT_CHAT_ID', '-100')
@@ -65,8 +65,8 @@ REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
 
 # Force Subscription Channels (Users must join these before using the bot)
-auth_req_channels = environ.get("AUTH_REQ_CHANNELS", "-100")
-auth_channels = environ.get("AUTH_CHANNELS", "-100")
+auth_req_channels = environ.get("AUTH_REQ_CHANNELS", "-1002737451602")
+auth_channels = environ.get("AUTH_CHANNELS", "-1002180054439")
 AUTH_REQ_CHANNELS = [int(ch) for ch in auth_req_channels.split() if ch and id_pattern.match(ch)]
 AUTH_CHANNELS = [int(ch) for ch in auth_channels.split() if ch and id_pattern.match(ch)]
 
@@ -76,9 +76,9 @@ AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in environ.get('PREMIUM_USER', '').split()]
 
 # Social & Community Links
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/dreamxbotz')
-OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/dreamxbotz')
-UPDATE_CHNL_LNK = environ.get('UPDATE_CHNL_LNK', 'https://t.me/dreamxbotz')
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/+wiERZq-x3KBmOGU9')
+OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/OdiaMoviesbot')
+UPDATE_CHNL_LNK = environ.get('UPDATE_CHNL_LNK', 'https://t.me/+wiERZq-x3KBmOGU9')
 
 
 # ==============================================================================
@@ -180,8 +180,8 @@ BAD_WORDS = {
 # ==============================================================================
 # 6. MOVIE UPDATES & POSTER NOTIFICATIONS
 # ==============================================================================
-MOVIE_UPDATE_NOTIFICATION = is_enabled(environ.get('MOVIE_UPDATE_NOTIFICATION', "False"), False)
-MOVIE_UPDATE_CHANNEL = int(environ.get('MOVIE_UPDATE_CHANNEL', '-100'))
+MOVIE_UPDATE_NOTIFICATION = is_enabled(environ.get('MOVIE_UPDATE_NOTIFICATION', "True"), True)
+MOVIE_UPDATE_CHANNEL = int(environ.get('MOVIE_UPDATE_CHANNEL', '-1002737451602'))
 DREAMXBOTZ_IMAGE_FETCH = is_enabled(environ.get('DREAMXBOTZ_IMAGE_FETCH', "True"), True)
 LINK_PREVIEW = is_enabled(environ.get('LINK_PREVIEW', "False"), False)
 ABOVE_PREVIEW = is_enabled(environ.get('ABOVE_PREVIEW', "True"), True)
@@ -196,45 +196,45 @@ LANDSCAPE_POSTER = is_enabled(environ.get('LANDSCAPE_POSTER', "True"), True)
 # ==============================================================================
 # 7. SHORTENERS & VERIFICATION SYSTEM
 # ==============================================================================
-IS_VERIFY = is_enabled(environ.get('IS_VERIFY', 'False'), False)
-LOG_VR_CHANNEL = int(environ.get('LOG_VR_CHANNEL', '-100'))
+IS_VERIFY = is_enabled(environ.get('IS_VERIFY', 'True'), True)
+LOG_VR_CHANNEL = int(environ.get('LOG_VR_CHANNEL', '-1002647690158'))
 VERIFY_IMG = environ.get("VERIFY_IMG", "https://telegra.ph/file/9ecc5d6e4df5b83424896.jpg")
 
 # Tutorial Links
-TUTORIAL = environ.get("TUTORIAL", "https://t.me/dreamxbotz")
-TUTORIAL_2 = environ.get("TUTORIAL_2", "https://t.me/dreamxbotz")
-TUTORIAL_3 = environ.get("TUTORIAL_3", "https://t.me/dreamxbotz")
+TUTORIAL = environ.get("TUTORIAL", "https://t.me/+DQg8ISdFoVgzYTY9")
+TUTORIAL_2 = environ.get("TUTORIAL_2", "https://t.me/+DQg8ISdFoVgzYTY9")
+TUTORIAL_3 = environ.get("TUTORIAL_3", "https://t.me/+DQg8ISdFoVgzYTY9")
 
 # Primary Shortener
-SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", "")
-SHORTENER_API = environ.get("SHORTENER_API", "")
+SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", "softurl.in")
+SHORTENER_API = environ.get("SHORTENER_API", "e915e6a2bba1ba146f667539aec1074ee0760c14")
 
 # Secondary Shortener
-SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", "")
-SHORTENER_API2 = environ.get("SHORTENER_API2", "")
+SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", "shortxlinks.com")
+SHORTENER_API2 = environ.get("SHORTENER_API2", "af2492502a6364145ea8c019324d4c14ff5d9c52")
 
 # Tertiary Shortener
-SHORTENER_WEBSITE3 = environ.get("SHORTENER_WEBSITE3", "")
-SHORTENER_API3 = environ.get("SHORTENER_API3", "")
+SHORTENER_WEBSITE3 = environ.get("SHORTENER_WEBSITE3", "softurl.in")
+SHORTENER_API3 = environ.get("SHORTENER_API3", "e915e6a2bba1ba146f667539aec1074ee0760c14")
 
 # Verification Time Gaps (in seconds)
-TWO_VERIFY_GAP = int(environ.get('TWO_VERIFY_GAP', "1200"))       # 20 minutes
-THREE_VERIFY_GAP = int(environ.get('THREE_VERIFY_GAP', "54000"))   # 15 hours
+TWO_VERIFY_GAP = int(environ.get('TWO_VERIFY_GAP', "300"))       # 20 minutes
+THREE_VERIFY_GAP = int(environ.get('THREE_VERIFY_GAP', "300"))   # 15 hours
 
 
 # ==============================================================================
 # 8. PREMIUM PLANS & PAYMENT CONFIGURATION
 # ==============================================================================
-QR_CODE = environ.get('QR_CODE', 'https://graph.org/file/e419f801841c2ee3db0fc.jpg')
-OWNER_UPI_ID = environ.get('OWNER_UPI_ID', 'ɴᴏ ᴀᴠᴀɪʟᴀʙʟᴇ ʀɪɢʜᴛ ɴᴏᴡ')
+QR_CODE = environ.get('QR_CODE', 'https://ibb.co/tT9ZQMfQ')
+OWNER_UPI_ID = environ.get('OWNER_UPI_ID', 'rana-premium-botz@fam')
 
 # Stars / Premium Pricing Structure {Amount: "Duration"}
 STAR_PREMIUM_PLANS = {
-    10: "7day",
-    20: "15day",
-    40: "1month",
-    55: "45day",
-    75: "60day",
+    50: "30day",
+    100: "60day",
+    150: "90day",
+    200: "120day",
+    250: "150day",
 }
 
 
